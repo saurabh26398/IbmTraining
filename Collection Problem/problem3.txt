@@ -1,0 +1,44 @@
+package saurabhjibm;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapDemo {
+	Map<String, String> map = new HashMap<String, String>();
+	public static void main(String[] args) {
+		HashMapDemo mapDemo=new HashMapDemo();
+		mapDemo.StoreCountryCapital("India", "Delhi");
+		mapDemo.StoreCountryCapital("USA", "Washington DC");
+		mapDemo.retrieveCountryCapital();
+		mapDemo.retrieveCountry();
+		mapDemo.retrieveCapital();
+	}
+	
+	public void StoreCountryCapital(String country, String Capital){
+		
+	map.put(country, Capital);
+	}
+	
+	public void retrieveCountryCapital(){
+		Map<String, String> map2 = new HashMap<String, String>();
+		map2.putAll(map);
+		System.out.println(map2);
+	}
+	public void retrieveCountry(){
+		System.out.println("Countries:");
+		Iterator<String> itr = map.keySet().iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+	public void retrieveCapital(){
+		System.out.println("Capitals :");
+		Iterator<String> itr = map.values().iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+
+}

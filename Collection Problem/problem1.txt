@@ -1,0 +1,43 @@
+package saurabhjibm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListDemo {
+	List<Integer> A1= new ArrayList<Integer>();
+	public static void main(String[] args) {
+		 ArrayListDemo listDemo = new ArrayListDemo();
+		listDemo.StoreEvenNumbers(50);
+		listDemo.printEvenNumbers();
+		listDemo.retrieveEvenNuber(10);
+	}
+	private void retrieveEvenNuber(int num) {
+		List<Integer> A2= new ArrayList<Integer>();
+		for(int i=0; i<=num;i++){
+			A2.add(A1.get(i));	
+		}
+		System.out.println("retrieved first"+num+ "elements from A1 ");
+		System.out.println(A2);		
+	}
+	private void printEvenNumbers() {
+		List<Integer> A2= new ArrayList<Integer>();
+		for(int num: A1){
+			A2.add(num*2);
+		}
+		System.out.println("Array list with multiple of each element:");
+		System.out.println(A2);
+	}
+	public void StoreEvenNumbers(int n){
+		for (int i=2; i<=n ; i++){
+			if(i%2==0){
+				A1.add(i);
+			}
+			else{
+				continue;	
+			}
+			
+		}
+	}
+	
+
+}
