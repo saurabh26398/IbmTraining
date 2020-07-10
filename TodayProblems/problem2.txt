@@ -1,0 +1,33 @@
+package saurabhjibm;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashsetDemo {
+	Set<String> set =new HashSet<String>();
+	public static void main(String[] args) {
+	
+
+HashsetDemo hashSet= new HashsetDemo();
+hashSet.setCountryNames("India", "USA", "Russia","Isreal");
+hashSet.rerieveCountryNames();
+		}
+	
+	private void rerieveCountryNames() {
+		System.out.println("Countries:\n");
+		Iterator iterator = set.iterator();
+			while(iterator.hasNext()) {
+				System.out.println(iterator.next());
+	}}
+
+	public void setCountryNames(String... names){
+		
+		for(String countryNames: names){
+			set.add(countryNames);
+		}
+		
+	}
+	}
+
+
